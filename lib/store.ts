@@ -96,7 +96,13 @@ export const useTaskStore = create<TaskState & TaskActions>()(
 export const useChatStore = create<ChatState & ChatActions>()(
   persist(
     (set) => ({
-      messages: [],
+      messages: [
+        {
+          role: "agent",
+          content: "Welcome to the chat with the FINAPI agent, how may I help you today?",
+          id: uuid()
+        }
+      ],
       addMessage: (message: Message) => set((state) => ({
         messages: [...state.messages, message]
       })),
