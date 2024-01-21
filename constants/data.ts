@@ -119,6 +119,12 @@ export const navItems: NavItem[] = [
     label: "Dashboard",
   },
   {
+    title: "Chat",
+    href: "/dashboard/chat",
+    icon: "messageCircle",
+    label: "chat",
+  },
+  {
     title: "User",
     href: "/dashboard/user",
     icon: "user",

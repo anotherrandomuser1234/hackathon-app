@@ -22,13 +22,23 @@ export type Task = {
   status: Status;
 };
 
-export type State = {
+export type Message = {
+  role: "agent" | "user";
+  content: string;
+  id: string;
+}
+
+export type TaskState = {
   tasks: Task[];
   columns: Column[];
   draggedTask: string | null;
 };
 
-export type Actions = {
+export type ChatState = {
+  messages: Message[];
+}
+
+export type TaskActions = {
   addTask: (title: string, description?: string) => void;
   addCol: (title: string) => void;
   dragTask: (id: string | null) => void;
@@ -39,7 +49,12 @@ export type Actions = {
   updateCol: (id: UniqueIdentifier, newName: string) => void;
 };
 
-export const useTaskStore = create<State & Actions>()(
+export type ChatActions = {
+  addMessage: (message: Message) => void;
+  removeMessage: (message: Message) => void;
+}
+
+export const useTaskStore = create<TaskState & TaskActions>()(
   persist(
     (set) => ({
       tasks: [],
@@ -76,4 +91,19 @@ export const useTaskStore = create<State & Actions>()(
     }),
     { name: "task-store", skipHydration: true },
   ),
+);
+
+export const useChatStore = create<ChatState & ChatActions>()(
+  persist(
+    (set) => ({
+      messages: [],
+      addMessage: (message: Message) => set((state) => ({
+        messages: [...state.messages, message]
+      })),
+      removeMessage: (message: Message) => set((state) => ({
+        messages: state.messages.filter((msg) => msg.content !== message.content)
+      }))
+    }),
+    { name: "chat-store", skipHydration: true }
+  )
 );
