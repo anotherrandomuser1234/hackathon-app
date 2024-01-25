@@ -119,23 +119,23 @@ export const navItems: NavItem[] = [
     label: "Dashboard",
   },
   {
-    title: "Chat",
+    title: "F.R.E.S.C.A.",
     href: "/dashboard/chat",
     icon: "messageCircle",
     label: "chat",
   },
   {
-    title: "User",
+    title: "Clients",
     href: "/dashboard/user",
     icon: "user",
     label: "user",
   },
-  {
-    title: "Employee",
-    href: "/dashboard/employee",
-    icon: "employee",
-    label: "employee",
-  },
+  // {
+  //   title: "Employee",
+  //   href: "/dashboard/employee",
+  //   icon: "employee",
+  //   label: "employee",
+  // },
   {
     title: "Profile",
     href: "/dashboard/profile",
@@ -143,7 +143,7 @@ export const navItems: NavItem[] = [
     label: "profile",
   },
   {
-    title: "Kanban",
+    title: "Tasks",
     href: "/dashboard/kanban",
     icon: "kanban",
     label: "kanban",

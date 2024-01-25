@@ -10,8 +10,8 @@ export default function Sidebar() {
       <div className="space-y-4 py-4">
         <div className="px-3 py-2">
           <div className="space-y-1">
-            <h2 className="mb-2 px-4 text-xl font-semibold tracking-tight">
-              Overview
+            <h2 className="mb-2 px-4 text-xl font-semibold tracking-tight mb-8">
+              EyeHawk
             </h2>
             <DashboardNav items={navItems} />
           </div>

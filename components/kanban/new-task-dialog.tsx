@@ -32,7 +32,7 @@ export default function NewTaskDialog() {
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="secondary" size="sm">
+        <Button variant="primary" size="sm">
           ＋ Add New Todo
         </Button>
       </DialogTrigger>

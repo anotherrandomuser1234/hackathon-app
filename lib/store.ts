@@ -99,7 +99,7 @@ export const useChatStore = create<ChatState & ChatActions>()(
       messages: [
         {
           role: "agent",
-          content: "Welcome to the chat with the FINAPI agent, how may I help you today?",
+          content: "Welcome to the chat with your personal F.R.E.S.C.A, (Financially Responsible Expert for Stock and Crypto Assets), how may I help you today?",
           id: uuid()
         }
       ],

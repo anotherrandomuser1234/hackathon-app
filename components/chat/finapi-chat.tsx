@@ -92,11 +92,11 @@ export default function FinApiChat() {
                     <div className="flex items-center space-x-4">
                         <Avatar>
                             <AvatarImage src="/avatars/01.png" alt="Image" />
-                            <AvatarFallback>MA</AvatarFallback>
+                            <AvatarFallback className="bg-primary">MA</AvatarFallback>
                         </Avatar>
                         <div>
                             <p className="text-sm font-medium leading-none">Murak Abdel Al Tahini</p>
-                            <p className="text-sm text-muted-foreground">murak_abdel@tahini.wtf</p>
+                            <p className="text-sm text-muted-foreground">murak_abdel@tahini.com</p>
                         </div>
                     </div>
                     <TooltipProvider delayDuration={0}>
@@ -131,7 +131,7 @@ export default function FinApiChat() {
                                 >
                                     {message.content}
 
-                                    <X className="cursor-pointer min-h-[20px] min-w-[20px]" onClick={() => removeMessage(message)} />
+                                    <X className="cursor-pointer min-h-[20px] min-w-[20px] max-w[20px]" onClick={() => removeMessage(message)} />
                                 </div>
 
 
